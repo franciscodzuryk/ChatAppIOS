@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play VideoVC-->
+        <scene sceneID="fU4-EF-YrZ">
+            <objects>
+                <viewController storyboardIdentifier="PlayVideoVC" id="uYN-D5-Zeb" customClass="PlayVideoVC" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpV-gH-YuN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krY-Xw-luq" customClass="YTPlayerView" customModule="youtube_ios_player_helper_swift">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5u-lM-emH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="playPause:" destination="uYN-D5-Zeb" eventType="touchUpInside" id="tGs-lw-Ucv"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Aox-Nk-JPb">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="leading" secondItem="2R4-53-9LZ" secondAttribute="leading" id="2RA-sh-apK"/>
+                            <constraint firstItem="2R4-53-9LZ" firstAttribute="bottom" secondItem="krY-Xw-luq" secondAttribute="bottom" id="5mF-IP-S0V"/>
+                            <constraint firstItem="I5u-lM-emH" firstAttribute="centerY" secondItem="Aox-Nk-JPb" secondAttribute="centerY" id="AXp-TP-Sp3"/>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="leading" secondItem="I5u-lM-emH" secondAttribute="leading" id="Djb-Z4-96Z"/>
+                            <constraint firstItem="2R4-53-9LZ" firstAttribute="trailing" secondItem="krY-Xw-luq" secondAttribute="trailing" id="cg7-X6-aLo"/>
+                            <constraint firstItem="I5u-lM-emH" firstAttribute="centerX" secondItem="Aox-Nk-JPb" secondAttribute="centerX" id="edq-C8-NSx"/>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="top" secondItem="I5u-lM-emH" secondAttribute="top" id="gyd-0W-rSY"/>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="trailing" secondItem="I5u-lM-emH" secondAttribute="trailing" id="hgZ-AQ-jZT"/>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="bottom" secondItem="I5u-lM-emH" secondAttribute="bottom" id="oKt-xq-nTi"/>
+                            <constraint firstItem="krY-Xw-luq" firstAttribute="top" secondItem="2R4-53-9LZ" secondAttribute="top" id="v60-iA-2YE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2R4-53-9LZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlayPause" destination="I5u-lM-emH" id="FnH-py-OQe"/>
+                        <outlet property="loadingMovieIndicator" destination="Aox-Nk-JPb" id="BSW-pF-emC"/>
+                        <outlet property="playerView" destination="krY-Xw-luq" id="9bp-Nk-zcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCt-8v-sYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="54"/>
+        </scene>
+    </scenes>
+</document>
