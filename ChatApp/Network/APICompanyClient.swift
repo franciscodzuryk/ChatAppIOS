@@ -128,7 +128,7 @@ class APICompanyClient : APICompanyClientInterface {
     }
     
     func getStatus(success: @escaping ([User]) -> Void, fail: @escaping (Error) -> Void) {
-        guard let request = requestManager.GETRequest(path: "/user/status") else {
+        guard let request = requestManager.GETRequest(path: "/user") else {
             fail(BaseURLError.wrongURL)
             return
         }

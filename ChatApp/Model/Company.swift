@@ -22,7 +22,7 @@ enum CompanyStatus: Int, Codable {
     }
 }
 
-class Company : Codable {
+class Company: Codable {
     let name: String
     let status: CompanyStatus
     var users = [User]()
