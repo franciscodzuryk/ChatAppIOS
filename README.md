@@ -2,8 +2,6 @@
 
 Este desarrollo está realizado solo con fines académicos.
 
-<video src="ChatApp.mp4" width="640" height="320" controls preload></video>
-
 ### Descripción
 Aplicación iOS para comunicar vía chat a N usuarios con una compañia.
 Presenta dos modos de login:
